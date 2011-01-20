@@ -7,6 +7,19 @@
   <name>JBit</name>
   <description>Large BitSet Support Class for Java</description>
 
+
+  <distributionManagement>
+  	<repository>
+  		<id>repo</id>
+  		<url>https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/releases</url>
+  	</repository>
+  	<snapshotRepository>
+  		<id>snapshot-repo</id>
+  		<url>https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/snapshots</url>
+  	</snapshotRepository>
+  </distributionManagement>
+
+
   <build>
     <plugins>
       <plugin>

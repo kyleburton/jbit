@@ -27,6 +27,24 @@ public class Example {
 }
 </pre>
 
+h2. Maven Repository
+
+<pre>
+<repositories>
+    <repository>
+        <id>cemerick-snapshots</id>
+        <url>https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/releases</url>
+    </repository>
+</repositories>
+</pre>
+
+<pre>
+  :repositories {"kyleburton-releases" "https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/snapshots/"}
+  ;; or:
+  :repositories {"kyleburton-snapshots" "https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/releases/"}
+</pre>
+
+
 h2. Leiningen
 
 <pre>
