@@ -1,0 +1,59 @@
+h1. LargeBitSet
+
+Bit set implementation to support bit sets natively in Java that suport a
+@Long.MAX_VALUE@ number of bits.  @java.util.BitSet@ uses an @int@ for addressing
+the bits.  This limits the number of bits to @2^31@.
+
+
+The implementation uses a list of @BitSet@'s to store the bits and performs
+simple a offset calculation to manage the bits.  This allow the implementation
+to be pure Java, though a native implementation (C/JNI) would be more efficient
+in both memory and time.
+
+h1. Usage
+
+<pre>
+import com.github.kyleburton.JBit;
+
+public class Example {
+  public static void main (String [] args ) {
+    JBit bitSet = new JBit();
+    bitSet.set( 2L * (long)Integer.MAX_VALUE );
+    for (int ii = -5; ii <= 5; ++ii ) {
+      long jj = (long)ii + (2L * (long)Integer.MAX_VALUE);
+      System.out.println("set?[" + ii + "/" + jj + "]" + bitSet.get(jj));
+    }
+  }
+}
+</pre>
+
+h2. Leiningen
+
+<pre>
+   [com.github.kyleburton/JBit "1.0.0"]
+</pre>
+
+h2. Maven
+
+<pre>
+  <dependencies>
+
+    <dependency>
+      <groupId>com.github.kyleburton</groupId>
+      <artifactId>JBit</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+    ...
+
+  </dependencies>
+</pre>
+
+h1. Installation
+
+h1. License
+
+Copyright (C) 2011 RelayNetwork
+
+Distributed under the Eclipse Public License, the same as Clojure.
+
