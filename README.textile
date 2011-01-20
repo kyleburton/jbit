@@ -75,8 +75,6 @@ h2. Maven
   </dependencies>
 </pre>
 
-h1. Installation
-
 h1. License
 
 Copyright (C) 2011 RelayNetwork
