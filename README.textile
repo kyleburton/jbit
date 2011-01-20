@@ -32,16 +32,24 @@ h2. Maven Repository
 <pre>
 <repositories>
     <repository>
-        <id>cemerick-snapshots</id>
+        <id>kyleburton-releases</id>
         <url>https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/releases</url>
+    </repository>
+</repositories>
+
+<!-- or -->
+<repositories>
+    <repository>
+        <id>kyleburton-snapshots</id>
+        <url>https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/snapshots</url>
     </repository>
 </repositories>
 </pre>
 
 <pre>
-  :repositories {"kyleburton-releases" "https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/snapshots/"}
+  :repositories {"kyleburton-releases" "https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/releases/"}
   ;; or:
-  :repositories {"kyleburton-snapshots" "https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/releases/"}
+  :repositories {"kyleburton-snapshots" "https://github.com/kyleburton/kyleburton-mvn-repo/raw/master/snapshots/"}
 </pre>
 
 
