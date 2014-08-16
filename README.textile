@@ -1,14 +1,9 @@
 h1. LargeBitSet
 
-Bit set implementation to support bit sets natively in Java that suport a
-@Long.MAX_VALUE@ number of bits.  @java.util.BitSet@ uses an @int@ for addressing
-the bits.  This limits the number of bits to @2^31@.
+Bit set implementation to support bit sets in Java with a @Long.MAX_VALUE@ number of bits.  @java.util.BitSet@ uses an @int@ for addressing bits, this limits the number of bits to @2^31@.
 
 
-The implementation uses a list of @BitSet@'s to store the bits and performs
-simple a offset calculation to manage the bits.  This allow the implementation
-to be pure Java, though a native implementation (C/JNI) would be more efficient
-in both memory and time.
+The implementation uses a list of @BitSet@ objects to store the bits and performs an offset calculation to manage the bits.  This allows the implementation to be pure Java, though a native implementation (C/JNI) would be more efficient in both memory and time.
 
 h1. Usage
 
